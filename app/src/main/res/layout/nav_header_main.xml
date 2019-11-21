@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:paddingTop="4dp"
+            android:id="@+id/iconname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_name"/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/nameprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/iconname"
+            android:layout_toRightOf="@+id/iconname"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/iconname"
+            android:paddingTop="4dp"
+            android:id="@+id/icontel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_tel"/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/nameprofile"
+            android:id="@+id/tellprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/icontel"
+            android:layout_toRightOf="@+id/icontel"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/icontel"
+            android:paddingTop="1dp"
+            android:id="@+id/iconage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_age"/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tellprofile"
+            android:id="@+id/vage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/icontel"
+            android:layout_toRightOf="@+id/icontel"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/iconage"
+            android:paddingTop="1dp"
+            android:id="@+id/iconarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_area"/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/vage"
+            android:id="@+id/varea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/icontel"
+            android:layout_toRightOf="@+id/icontel"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/iconarea"
+            android:paddingTop="2dp"
+            android:id="@+id/iconaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_address"/>
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/varea"
+            android:id="@+id/vaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/icontel"
+            android:layout_toRightOf="@+id/icontel"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    </RelativeLayout>
+
+</LinearLayout>

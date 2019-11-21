@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nofi"
+        android:icon="@drawable/ic_action_belll"
+        android:title="พืชที่กำลังปลูก"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/planting"
+        android:icon="@drawable/ic_action_planting"
+        android:title="พืชที่กำลังปลูก"
+        app:showAsAction="always"/>
+</menu>

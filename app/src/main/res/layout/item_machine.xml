@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:id="@+id/cardmachine"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/logoaddressm"
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logopuklaidee"/>
+
+        <TextView
+            android:id="@+id/idmac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/logoaddressm"
+            android:layout_toRightOf="@+id/logoaddressm"
+            android:text="รหัสเครื่อง" />
+
+        <TextView
+            android:id="@+id/nameaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idmac"
+            android:layout_alignStart="@+id/idmac"
+            android:layout_alignLeft="@+id/idmac"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="8dp"
+            android:text="ที่ตัง" />
+
+        <ImageView
+            android:id="@+id/aboutmac"
+            android:layout_marginTop="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_action_arrow" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

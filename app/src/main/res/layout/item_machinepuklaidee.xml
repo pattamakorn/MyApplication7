@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:id="@+id/cardmachinefortree"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    android:layout_width="160dp"
+    android:layout_height="120dp">
+
+    <RelativeLayout
+        android:background="@drawable/bgcard"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:id="@+id/idmacfortree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@+id/logoaddressmfortree"
+            android:layout_toRightOf="@+id/logoaddressmfortree"
+            android:text="รหัสเครื่อง"
+            tools:ignore="UnknownId" />
+
+        <TextView
+            android:fontFamily="@font/mitr_semibold"
+            android:textColor="#000"
+            android:textSize="13sp"
+            android:id="@+id/nameaddressfortree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idmacfortree"
+            android:layout_alignStart="@+id/idmacfortree"
+            android:layout_alignLeft="@+id/idmacfortree"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="11dp"
+            android:text="ที่ตัง" />
+
+        <ImageView
+            android:id="@+id/aboutmacfortree"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/ic_action_more" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

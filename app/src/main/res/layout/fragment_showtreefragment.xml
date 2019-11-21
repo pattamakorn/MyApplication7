@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".showtreefragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bgpuk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".showtreeformachine">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/numbermachine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitr_semibold"
+                    android:text="Number Machine"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="1dp"
+                        app:cardElevation="3dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/moist"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/ofmoist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="moist"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/mnxofmoist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(9 - 9)"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="1dp"
+                        app:cardElevation="3dp"
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/ph"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/ofph"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ph"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/mnxofph"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(9 - 9)"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="1dp"
+                        app:cardElevation="3dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:src="@drawable/sunlight"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/oflight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="light"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:textColor="#383737"
+                                android:id="@+id/mnxoflight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(1000 - 1000)"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="28dp">
+            <ImageView
+                android:id="@+id/sortimage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ic_action_sort"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/sorttext"
+                android:fontFamily="@font/mitr_semibold"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:layout_marginRight="20dp"
+                android:text="เรียงตาม"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/loaddatatree"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</FrameLayout>

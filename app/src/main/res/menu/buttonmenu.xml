@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_action_news"
+        android:title="ข่าวสาร" />
+
+    <item
+        android:id="@+id/timetable"
+        android:icon="@drawable/ic_action_puklaidee"
+        android:title="ปลูกอะไรดี" />
+
+    <item
+        android:id="@+id/machine"
+        android:icon="@drawable/ic_action_gate"
+        android:title="อุปกรณ์วัดค่า" />
+
+    <item
+        android:id="@+id/gps"
+        android:icon="@drawable/ic_action_history"
+        android:title="ประวัติการปลูก" />
+
+    <item
+        android:id="@+id/checknames"
+        android:icon="@drawable/ic_action_dividend"
+        android:title="เงินปันผล" />
+
+
+</menu>

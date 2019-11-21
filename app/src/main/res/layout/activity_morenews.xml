@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgpuk"
+    tools:context=".morenews">
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="20dp"
+        app:cardCornerRadius="13dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/longimg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="Korn"
+                android:scaleType="fitXY"
+                android:src="@color/colorPrimary" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lva"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@+id/longimg"
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/shownews"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/mitr_semibold"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:text="Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
