@@ -116,7 +116,7 @@ public class showtreefragment extends Fragment {
     }
 
     private void sortby(){
-        final String[] listItems = {"แสดงทั้งหมด","ความเหมาะสมของพื้นที่","ราคา","ตลาด","ฤดู"};
+        final String[] listItems = {"แสดงทั้งหมด","ความเหมาะสมของพื้นที่","ราคา","ตลาด","ฤดู","ผลการวิเคราะห์"};
         AlertDialog.Builder mbuilder = new AlertDialog.Builder(getContext());
         mbuilder.setTitle("เรียงตาม");
         mbuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
@@ -148,6 +148,12 @@ public class showtreefragment extends Fragment {
                 }
                 else if(i == 4){
                     selectseason();
+                }
+                else if(i == 5){
+                    sorttext.setText("ผลการวิเคราะห์");
+                    listpuk.clear();
+                    RecycelrpuklaideeAdapter.notifyDataSetChanged();
+                    loadallprocess();
                 }
                 dialogInterface.dismiss();
             }
@@ -648,6 +654,65 @@ public class showtreefragment extends Fragment {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
                 params.put("idmache",idmac);
+                return params;
+            }
+
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue.add(stringRequest);
+    }
+
+    public void loadallprocess(){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                "http://203.154.83.137/puklaidee/treesortbyall.php", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray array = new JSONArray(response);
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject posts = array.getJSONObject(i);
+                        String tid = posts.getString("tid");
+                        String namet = posts.getString("namet");
+                        String phl = posts.getString("phl");
+                        String phh = posts.getString("phh");
+                        String price = posts.getString("price");
+                        String img = posts.getString("img");
+                        String season = posts.getString("season");
+                        String report = posts.getString("report");
+
+                        SharedPreferences prefs = getActivity().getSharedPreferences(login.MyPREFERENCES, Activity.MODE_PRIVATE);
+                        String myid = prefs.getString("My_user","NoId");
+
+                        String kk = getArguments().getString("key_value");
+                        listpuk.add(new recycelrpuklaidee(
+                                tid,
+                                report,
+                                img,
+                                kk,
+                                myid,
+                                namet));
+                        recycelrpuklaideeAdapter RecycelrpuklaideeAdapter = new recycelrpuklaideeAdapter(getContext(),listpuk);
+                        recyclerView.setAdapter(RecycelrpuklaideeAdapter);
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+
+                }) {
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("lowph",nph);
+                params.put("hightph",xph);
                 return params;
             }
 
